@@ -1,0 +1,773 @@
+@import url('https://fonts.googleapis.com/css2?family=Basic&family=Jost:wght@900&display=swap');
+
+* {
+  font-family: "Basic", sans-serif;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  scroll-padding-top: 25px;
+  list-style: none;
+  text-decoration: none;
+}
+
+body {
+  background-image: url("/level_2_task_2/images/table.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+section {
+  padding: 40px 5%;
+}
+
+.navbar {
+  width: 100%;
+  height: 75px;
+  position: fixed;   
+  top: 0;
+  right: 0;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center; 
+  padding: 15px 25px;
+  background-color: #F1F1F1;
+  border-bottom: 2px solid #111234;
+}
+
+.social i {
+  font-size: 25px;
+  margin-right: 25px;
+  color: #111234;
+}
+
+.social i:hover {
+  color: #FC9F40;
+}
+
+.logo {
+  width: 200px;
+  height: 50px;  
+}
+
+.logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.navlist {
+  display: flex;
+}
+
+.navlist a {
+  font-size: 17.5px;
+  font-weight: bold;
+  padding: 10px 20px;
+  color: #111234;
+}
+
+.navlist a:hover {
+  color: #FF2C2C;
+}
+
+.navlist a.active { 
+  background-color: #111234;
+  color: #F1F1F1;
+}
+
+#share-icon {
+  font-size: 20px;
+  display: none;
+  cursor: pointer;
+}
+
+#menu-icon {
+  font-size: 25px;
+  cursor: pointer;
+  display: none;
+}
+
+.home {
+  width: 100%;
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+}
+
+.home-img img {
+  width: 100%;
+  height: 100%;
+}
+
+.home-text h1 {
+  font-size: 75px;
+  color: #FC9F40;
+  font-family: "jost", sans-serif;
+  margin-bottom: 0;
+}
+
+.home-text p {
+  font-size: 20px;
+  color: #F1F1F1;
+  text-align: justify;
+}
+
+.menu-container {
+  display: grid;
+  align-items: center;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-rows: repeat(2, minmax(0, 1fr)); 
+  gap: 20px;
+}
+
+.menu h1 {
+  color: #FC9F40;
+  text-align: center;
+  font-size: 50px;
+  font-family: "jost", sans-serif;
+}
+
+.card {
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  padding: 15px;
+  background-color: #FAFAD2;
+  gap: 15px;
+  transition: transform 0.5s ease-in-out;
+}
+
+.card:hover {
+  transform: scale(1.025);
+}
+
+.card-img {
+  flex: 1;
+  width: 200px;
+  height: 200px;
+  border-radius: 7.5px;
+  overflow: hidden;
+}
+
+.card-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  transition: transform 0.5s ease-in-out;
+  cursor: pointer;
+}
+
+.card-img img:hover {
+  transform: scale(1.05);
+}
+
+.card-info {
+  flex: 1;
+  width: 200px;
+  height: 200px;
+  text-align: justify;
+}
+
+.card h2 {
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.card p {
+  font-size: 14px;
+}
+
+.price-cart {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card span {
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.card .bx {
+  background-color: #F4C430;  
+  font-size: 25px;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.card .bx:hover {
+  background: #FFBF00;
+  cursor: pointer;
+}
+
+.services h1 {
+  color: #FC9F40;
+  text-align: center;
+  font-size: 50px;
+  font-family: "jost", sans-serif;
+}
+
+.services-container {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.s-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  background-color: #FAFAD2;
+  padding: 15px;
+}
+
+.s-box .img {
+  width: 100px;
+  height: 100px;
+}
+
+.s-box img {
+  width: 100%;
+  height: 100%;
+  transition: transform 0.5s ease-in-out;
+  cursor: pointer;
+}
+
+.s-box .img img:hover {
+  transform: scale(1.05);
+}
+
+.s-box .serv-info {
+  width: 400px;
+  text-align: justify;
+}
+
+.s-box .serv-info h3 {
+  font-size: 25px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.s-box .serv-info p {
+  font-size: 14px;
+  margin: 0;
+}
+
+.contact {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+  padding: 10px 5%;
+  color: #F1F1F1;
+}
+
+.company-info .img {
+  cursor: pointer;
+  width: 200px;
+}
+
+.company-info .img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.about {
+  width: 75%;
+  font-size: 14px;
+  text-align: justify;
+}
+
+.other {
+  display: flex;
+  justify-content: space-around;
+  font-size: 14px;
+}
+
+.contact-box h3 {
+  font-size: 20px;
+}
+
+.contact-box p {
+  font-size: 14px;
+}
+
+.contact-box li a {
+  color: #F1F1F1; 
+}
+
+.contact-box li a:hover {
+  color: #FC9F40;
+}
+
+.address {
+  display: flex;
+  flex-direction: column;
+}
+
+.address i {
+  font-size: 20px;
+}
+
+.address span {
+  font-size: 14px;
+  margin-left: 5px;
+}
+
+.address a {
+  color: #F1F1F1;
+}
+
+.address a:hover, .address i:hover {
+  color: #FC9F40;
+}
+
+.copyright {
+  cursor: pointer;
+  text-align: center;
+  padding: 15px 5%;
+  color: #F1F1F1;
+}
+
+.copyright p {
+  border-top: 2px solid #F1F1F1;
+  font-size: 14px;
+  padding-top: 15px;
+  margin: 0;
+}
+
+@media screen and (min-width: 769px) and (max-width: 1224px) {
+  section {
+    padding: 30px 4%;
+  }
+  .navbar {
+    height: 65px;
+  }
+  .social i {
+    font-size: 22.5px;
+    margin-right: 25px;
+    color: #111234;
+  }
+  .logo {
+    width: 180px;
+    height: 50px;
+  }  
+  .navlist a {
+    padding: 12.5px;
+  }
+  .navlist li a {
+    font-size: 14px;
+  }
+  .home {
+    grid-template-columns: 1fr;
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+  }
+  .home-text h1 {
+    font-size: 60px;
+    margin: 0;
+  }
+  .home-text p {
+    font-size: 17.5px;
+    text-align: justify;
+  }
+  .home-img {
+    width: 85%;
+  }
+  .menu h1, .services h1 {
+    font-size: 45px;
+  }
+  .menu-container {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 10px;
+  }
+  .card {
+    padding: 7.5px 7.5px 5px;
+    gap: 10px;
+  }
+  .card-img {
+    width: 100%;
+    height: 100%;
+  }
+  .card-img img {
+    border-radius: 7.5px;
+  }
+  .card-info {
+    width: 100%;
+    height: auto;
+    text-align: left;
+  }
+  .card h2 {
+    font-size: 19.5px;
+    margin: 0;
+  }
+  .card p, .card span {
+    font-size: 13px;
+  }
+  .card .bx {
+    font-size: 22px;
+    padding: 2.5px;
+  }
+  .services-container {
+    gap: 10px;
+  }
+  .s-box {
+    padding: 0 50px;
+  }
+  .s-box .img {
+    width: 35%;
+    height: 50%;
+  }
+  .s-box .serv-info {
+    width: 100%;
+    text-align: justify;
+  }
+  .s-box .serv-info h3 {
+    text-align: center;
+    font-size: 20px;
+  }
+  .s-box .serv-info p {
+    font-size: 13px;
+    margin: 0;
+  }
+  .contact {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    padding: 0 40px;
+  }
+  .about {
+    width: 85%;
+    font-size: 12px;
+    text-align: justify;
+  }
+  .other {
+    justify-content: space-around;
+  }
+  .contact-box h3 {
+    font-size: 18px;
+  }
+  .contact-box li, .contact-box span {
+    font-size: 12px;
+  }
+  .contact-box i {
+    font-size: 15px;
+  }
+  .copyright {
+    padding: 15px 40px;
+  }
+  .copyright p {
+    font-size: 12px;
+  }
+}
+
+@media screen and (min-width: 426px) and (max-width: 768px) {
+  section {
+    padding: 30px 5%;
+  }
+  .navbar {
+    height: 60px;
+  }
+  .navlist {
+    position: absolute;
+    top: 60px;
+    right: -1000px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    background: #F1F1F1;
+    transition: 0.2s ease;
+    padding: 10px;
+    margin: 0;
+  }
+  .navlist.active {
+    right: 0;
+  }
+  .social i {
+    font-size: 22.5px;
+    margin-right: 7.5px;
+    color: #111234;
+  }
+  .logo {
+    width: 150px;
+    height: 40px;
+  }  
+  .navlist a {
+    display: block;
+    font-size: 15px;
+    padding: 5px;
+  }
+  #menu-icon {
+    display: initial;
+    color: #111234;
+    z-index: 1001;
+  }
+  .home {
+    grid-template-columns: 1fr;
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .home-text h1 {
+    font-size: 55px;
+  }
+  .home-text p {
+    font-size: 15px;
+    text-align: justify;
+  }
+  .home-img {
+    width: 75%;
+  }
+  .menu h1, .services h1 {
+    font-size: 40px;
+  }
+  .menu-container {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12.5px;
+  }
+  .card {
+    padding: 10px 10px 5px;
+    gap: 10px;
+  }
+  .card-img {
+    width: 100%;
+    height: 100%;
+  }
+  .card-img img {
+    border-radius: 7.5px;
+  }
+  .card-info {
+    width: 100%;
+    height: auto;
+    text-align: left;
+  }
+  .card h2 {
+    font-size: 17.5px;
+    margin: 0;
+  }
+  .card p, .card span {
+    font-size: 12px;
+  }
+  .card .bx {
+    font-size: 22.5px;
+    padding: 3.25px;
+  }
+  .services-container {
+    gap: 12.5px;
+  }
+  .s-box {
+    padding: 0 10px;
+  }
+  .s-box .img {
+    width: 40%;
+    height: 50%;
+  }
+  .s-box .serv-info {
+    width: 100%;
+    text-align: left;
+  }
+  .s-box .serv-info h3 {
+    text-align: left;
+    font-size: 17.5px;
+  }
+  .s-box .serv-info p {
+    font-size: 12px;
+    margin: 0;
+    text-align: justify;
+  }
+  .contact {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .about {
+    width: 90%;
+    font-size: 11px;
+    text-align: justify;
+  }
+  .other {
+    justify-content: space-between;
+  }
+  .contact-box h3 {
+    font-size: 16px;
+  }
+  .contact-box li, .contact-box span {
+    font-size: 11px;
+  }
+  .contact-box i {
+    font-size: 15px;
+  }
+  .copyright p {
+    font-size: 11px;
+  }
+}
+
+@media screen and (max-width: 426px) {
+  section {
+    padding: 25px 3%;
+  }
+  .navbar {
+    height: 55px;
+    padding: 1.5%;
+  }
+  .social {
+    position: absolute;
+    top: 55px;
+    left: -1000px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    background: #F1F1F1;
+    transition: 0.2s ease-in-out;
+    padding: 5px 10px;
+  }
+  .social.active {
+    left: 0;
+  }
+  .social a {
+    display: block;
+    padding: 2.25px;
+    width: 25px;
+  }
+  #share-icon {
+    display: initial;
+    color: #111234;
+  }
+  .navlist {
+    position: absolute;
+    top: 55px;
+    right: -1000px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    background: #F1F1F1;
+    transition: 0.2s ease-in-out;
+    padding: 5px;
+    margin: 0;
+  }
+  .navlist.active {
+    right: 0;
+  }
+  .navlist a {
+    display: block;
+    padding: 5px;
+  }
+  .social i {
+    font-size: 20px;
+  }
+  .logo {
+    width: 125px;
+    height: 35px;
+  }
+  .navlist li a {
+    font-size: 13.5px;
+  }
+  #menu-icon {
+    display: initial;
+    color: #111234;
+  }
+  .home {
+    grid-template-columns: 1fr;
+    margin-top: 30px;
+  }
+  .home-text h1 {
+    font-size: 40px;
+  }
+  .home-text p {
+    font-size: 12.5px;
+    text-align: justify;
+  }
+  .menu h1, .services h1 {
+    font-size: 35px;
+    margin: 15px;
+  }
+  .menu-container {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+  }
+  .card {
+    flex-direction: column;
+    gap: 7.5px;
+    padding: 7.5px;
+  }
+  .card-img {
+    width: 100%;
+    height: 100%;
+  }
+  .card-info {
+    width: 100%;
+    text-align: left;
+  }
+  .card h2 {
+    font-size: 15px;
+    margin: 0;
+  }
+  .card p, .card span {
+    font-size: 10px;
+  }
+  .card .bx {
+    font-size: 20px;
+    padding: 2.5px;
+  }
+  .services-container {
+    gap: 10px;
+  }
+  .s-box {
+    padding: 10px;
+  }
+  .s-box .img {
+    width: 50%;
+    height: 50%;
+  }
+  .s-box .serv-info {
+    width: 100%;
+    text-align: left;
+  }
+  .s-box .serv-info h3 {
+    text-align: left;
+    font-size: 13.5px;
+  }
+  .s-box .serv-info p {
+    font-size: 10px;
+    margin: 0;
+  }
+  .contact {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+    padding: 3%;
+  }
+  .about {
+    width: auto;
+    font-size: 9px;
+    text-align: justify;
+    margin: 0;
+  }
+  .other {
+    justify-content: space-between;
+  }
+  .contact-box h3 {
+    font-size: 13.5px;
+    margin-top: 0;
+  }
+  .contact-box li, .contact-box span {
+    font-size: 9px;
+  }
+  .contact-box i {
+    font-size: 12.5px;
+  }
+  .copyright {
+    padding: 3%;
+  }
+  .copyright p {
+    font-size: 9px;
+    padding-top: 7.5px;
+  } 
+}
